@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical">
+    <FrameLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_36sdp"
+        android:background="#0097db">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="Arial"
+            android:lines="1"
+            android:padding="5dp"
+            android:text="Favourites"
+            android:textColor="@android:color/white"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+        <Button
+            android:id="@+id/faverote_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="#0079b0"
+            android:text="Back"
+            android:visibility="invisible"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/status_label"
+            android:layout_gravity="center|center_vertical"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:text="No favourites"
+            android:textColor="#707070"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    <ListView
+        android:id="@+id/list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="5dp"
+        android:scrollbars="vertical"/>
+    </FrameLayout>
+
+
+</LinearLayout>

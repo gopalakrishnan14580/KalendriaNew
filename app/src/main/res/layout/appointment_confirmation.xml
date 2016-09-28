@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_36sdp"
+        android:background="#0097db">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:layout_marginLeft="10dp"
+
+            android:fontFamily="Arial"
+            android:lines="1"
+            android:padding="5dp"
+            android:text="Appointment Confirmation"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+        <Button
+            android:id="@+id/appointment_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="#0079b0"
+            android:text="Back"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+
+        <LinearLayout
+            android:id="@+id/personalInfoView"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+
+            <FrameLayout
+                android:id="@+id/fragment_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="#D6D6D6"
+                android:paddingBottom="@dimen/_6sdp"
+                android:paddingTop="@dimen/_6sdp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/email_icon" />
+
+                    <EditText
+                        android:id="@+id/appointment_email_et"
+                        style="@style/MyAutoCompleteTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="2dp"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="Email Address"
+                        android:inputType="textEmailAddress"
+                        android:textColor="#313031"
+                        android:textColorHint="#707070"
+                        android:textSize="17dp" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fragment_firstname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="#D6D6D6"
+                android:paddingBottom="@dimen/_6sdp"
+                android:paddingTop="@dimen/_6sdp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/user_icon" />
+
+                    <EditText
+                        android:id="@+id/appointment_username_et"
+                        style="@style/MyAutoCompleteTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="2dp"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="First Name"
+                        android:inputType="text"
+                        android:maxLength="20"
+                        android:textColor="#313031"
+                        android:textColorHint="#707070"
+                        android:textSize="17dp" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/fragment_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="#D6D6D6"
+                android:paddingBottom="@dimen/_6sdp"
+                android:paddingTop="@dimen/_6sdp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/pho_icon" />
+
+                    <EditText
+                        android:id="@+id/appointment_phone_et"
+                        style="@style/MyAutoCompleteTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="2dp"
+                        android:editable="false"
+                        android:hint="Phone"
+                        android:inputType="phone"
+                        android:maxLength="20"
+                        android:textColor="#313031"
+                        android:textColorHint="@android:color/holo_red_light"
+                        android:textSize="17dp" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fragment_city"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="#D6D6D6"
+                android:paddingBottom="@dimen/_6sdp"
+                android:paddingTop="@dimen/_6sdp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/city_icons" />
+
+
+                    <EditText
+                        android:id="@+id/appointment_city_et"
+                        style="@style/MyAutoCompleteTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="2dp"
+                        android:hint="City"
+                        android:inputType="text"
+                        android:maxLength="20"
+                        android:textColor="#313031"
+                        android:textColorHint="@android:color/holo_red_light"
+                        android:textSize="17dp" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fragment_zipcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="#D6D6D6"
+                android:paddingBottom="@dimen/_6sdp"
+                android:paddingTop="@dimen/_6sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/email_icon" />
+
+                    <EditText
+                        android:id="@+id/appointment_zipcode_et"
+                        style="@style/MyAutoCompleteTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="2dp"
+                        android:hint="Zip Code"
+                        android:textColor="#313031"
+                        android:textColorHint="@android:color/holo_red_light"
+                        android:textSize="17dp" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/fragment_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="#D6D6D6"
+                android:paddingBottom="@dimen/_6sdp"
+                android:paddingTop="@dimen/_6sdp">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/address_icon" />
+
+                    <EditText
+                        android:id="@+id/appointment_address_et"
+                        style="@style/MyAutoCompleteTextView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="2dp"
+                        android:hint="Enter Your Address"
+                        android:imeOptions="actionDone"
+                        android:inputType="text"
+                        android:maxLength="80"
+                        android:maxLines="3"
+                        android:textColor="#313031"
+                        android:textColorHint="@android:color/holo_red_light"
+                        android:textSize="17dp" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+
+            <TextView
+                android:id="@+id/appointment_venu_name_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="Arial"
+                android:gravity="left"
+                android:lines="1"
+                android:paddingTop="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="Green and Green cleaning services"
+                android:textColor="#675BB1"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+
+            <TextView
+                android:id="@+id/appointment_venu_city_and_regien"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="Arial"
+                android:gravity="left"
+                android:lines="1"
+                android:paddingBottom="15dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:text="AI Barari, Dubai"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:typeface="serif" />
+
+
+            <LinearLayout
+                android:id="@+id/promocode_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:background="#D6D6D6"
+                    android:paddingBottom="@dimen/_6sdp"
+                    android:paddingTop="@dimen/_6sdp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/appointment_promo_code_et"
+                            style="@style/MyAutoCompleteTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_weight="0.7"
+                            android:gravity="left"
+                            android:hint="Enter Promo Code"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:maxLength="80"
+                            android:textColor="#313031"
+                            android:textColorHint="#707070"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/appointment_promo_code_btn"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="0.2"
+                            android:fontFamily="Arial"
+                            android:gravity="right"
+                            android:lines="1"
+                            android:padding="5dp"
+                            android:text="Apply"
+                            android:textColor="@color/colorSkyBlue"
+                            android:textSize="16dp"
+                            android:typeface="serif" />
+                    </LinearLayout>
+
+                </FrameLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp">
+
+                    <TextView
+                        android:id="@+id/promocode_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="left"
+                        android:text="Value: 10" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/voucher_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <FrameLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="#D6D6D6"
+                    android:paddingBottom="@dimen/_6sdp"
+                    android:paddingTop="@dimen/_6sdp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_weight="1"
+                        android:orientation="horizontal">
+
+                        <EditText
+                            android:id="@+id/appointment_gift_voucher_et"
+                            style="@style/MyAutoCompleteTextView"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="2dp"
+                            android:layout_weight="0.7"
+                            android:gravity="left"
+                            android:hint="Enter Gift Voucher"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:maxLength="80"
+                            android:textColor="#313031"
+                            android:textColorHint="#707070"
+                            android:textSize="16dp" />
+
+                        <TextView
+                            android:id="@+id/appointment_gift_voucher_btn"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="0.2"
+                            android:fontFamily="Arial"
+                            android:gravity="right"
+                            android:lines="1"
+                            android:padding="5dp"
+                            android:text="Apply"
+                            android:textColor="@color/colorSkyBlue"
+                            android:textSize="16dp"
+                            android:typeface="serif" />
+                    </LinearLayout>
+
+                </FrameLayout>
+
+
+                <LinearLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginLeft="5dp">
+
+                    <TextView
+                        android:id="@+id/gift_value"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="10dp"
+                        android:gravity="left"
+                        android:text="Value: 10" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <com.kalendria.kalendria.utility.NonScrollListView
+            android:id="@+id/appointment_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="2dp"
+            android:scrollbars="none"></com.kalendria.kalendria.utility.NonScrollListView>
+
+
+
+        <LinearLayout
+            android:id="@+id/appointment_other_layout"
+            android:layout_marginTop="5dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/appointment_other_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="2dp"
+            android:text="Other Details:"
+            android:textColor="#0097db"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:orientation="horizontal">
+
+
+
+                <TextView
+                    android:id="@+id/appointment_often_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="2dp"
+                    android:gravity="left"
+                    android:hint="How often: "
+                    android:textColor="@android:color/black"
+                    android:textSize="16dp" />
+
+
+        </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:background="@android:color/black"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="Arial"
+
+                    android:gravity="left|center_vertical"
+                    android:lines="1"
+                    android:padding="5dp"
+                    android:text="TOTAL  PRICE"
+                    android:textColor="@android:color/white"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@android:color/black"
+                android:orientation="horizontal">
+
+                <TextView
+
+                    android:id="@+id/appointment_discount_price_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="1dp"
+                    android:fontFamily="Arial"
+                    android:lines="1"
+                    android:padding="5dp"
+                    android:text="180AED"
+                    android:textColor="@android:color/white"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <TextView
+
+                    android:id="@+id/appointment_total_price_txt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="1dp"
+                    android:layout_weight="1"
+                    android:fontFamily="Arial"
+                    android:gravity="right"
+                    android:lines="1"
+                    android:padding="5dp"
+                    android:text="180AED"
+                    android:textColor="@android:color/white"
+                    android:textSize="14dp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center|bottom"
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/appointment_proceed_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:background="#0097db"
+                android:fontFamily="Arial"
+                android:gravity="center"
+                android:lines="1"
+                android:padding="5dp"
+                android:text="proceed"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>
+    </LinearLayout>

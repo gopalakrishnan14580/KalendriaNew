@@ -1,0 +1,108 @@
+<resources>
+
+
+    <!-- Base application theme. -->
+   <!-- <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        &lt;!&ndash; Customize your theme here. &ndash;&gt;
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+    </style>-->
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorBlack</item>
+        <item name="colorPrimaryDark">@color/colorBlack</item>
+        <item name="colorAccent">@color/colorBlack</item>
+        <item name="windowActionBar">true</item>
+        <item name="android:textColorPrimary">@color/colorBlack</item>
+    </style>
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Transparent.MyDemo" parent="Theme.AppCompat">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/white</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">fill_parent</item>
+        <item name="windowActionBar">true</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+
+    <style name="foodRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/star_rating_bar_full</item>
+        <!-- <item name="android:minHeight">48dip</item>
+        <item name="android:maxHeight">48dip</item> -->
+    </style>
+
+
+    <style name="MyAutoCompleteTextView" parent="android:Widget.Holo.Light.AutoCompleteTextView">
+        <item name="android:background">@color/autosearch</item>
+    </style>
+
+
+    <style name="StarRatingBar" parent="@android:style/Widget.RatingBar">
+        <item name="android:progressDrawable">@drawable/custome_ratingbar</item>
+
+    </style>
+
+    <style name="RatingBar" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/colorYellow</item>
+        <item name="colorControlActivated">@color/colorYellow</item>
+    </style>
+
+    <style name="kalandriatheme" parent="Theme.AppCompat.Light.NoActionBar" >
+        <item name="colorAccent">@color/primary_dark_material_light</item>
+    </style>
+
+    <style name="TextAppearance.baseText" parent="@android:style/TextAppearance">
+        <item name="android:textAppearance">?android:textAppearanceSmall</item>
+        <item name="android:typeface">sans</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <style name="BaseText" parent="@android:style/TextAppearance.Small">
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">#ffff</item>
+    </style>
+    <style name="autocomplete" parent="@android:style/TextAppearance.Small">
+        <item name="android:typeface">sans</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textColor">@color/colorBlack</item>
+    </style>
+
+    <style name="simpletooltip_default" parent="@style/BaseText">
+
+    </style>
+    <!--
+    <style name="ToolTipLayoutCustomStyle">
+        <item name="ttlm_padding">25dip</item>
+        <item name="ttlm_strokeColor">#ffe5a000</item>
+        <item name="ttlm_backgroundColor">@color/colorWhite</item>
+        <item name="ttlm_strokeWeight">2dip</item>
+        <item name="ttlm_cornerRadius">8dip</item>
+
+        <item name="android:textAppearance">?android:attr/textAppearanceInverse</item>
+    </style>
+    -->
+
+    <style name="RoboTheme">
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:textColor">#FFFFFF</item>
+        <item name="android:textSize">10sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:layout_marginTop">5dp</item>
+    </style>
+</resources>

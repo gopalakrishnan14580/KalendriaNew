@@ -1,0 +1,429 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/ly_form"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="45dp"
+        android:orientation="vertical">
+
+
+        <FrameLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_36sdp"
+            android:background="#0097db">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="Arial"
+                android:lines="1"
+                android:padding="5dp"
+                android:text="Gift voucher"
+                android:textColor="@android:color/white"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <Button
+                android:id="@+id/giftvoucher_back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:background="#0079b0"
+                android:text="Back"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+
+        <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <FrameLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:background="#D6D6D6">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/evoucher_rb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|center"
+                            android:buttonTint="#000"
+                            android:checked="true"
+                            android:drawablePadding="40dp"
+                            android:paddingLeft="8dip"
+                            android:scaleX="1.0"
+                            android:scaleY="1.0"
+                            android:text="eVoucher"
+                            android:textColor="#313031"
+                            android:textSize="16dp" />
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:background="#D6D6D6">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/hardcopy_rb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="right|center"
+                            android:buttonTint="#000"
+                            android:checked="false"
+                            android:drawablePadding="40dp"
+                            android:paddingLeft="8dip"
+                            android:scaleX="1.0"
+                            android:scaleY="1.0"
+                            android:text="Hard Copy (Extra 20 AED will be added)"
+                            android:textColor="#313031"
+                            android:textSize="16dp" />
+
+                    </LinearLayout>
+                </FrameLayout>
+
+
+                <FrameLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:background="#D6D6D6">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/_2sdp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/amount_icon" />
+
+                        <EditText
+                            android:id="@+id/gift_voucher_amount_et"
+                            style="@style/MyAutoCompleteTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_6sdp"
+                            android:layout_marginTop="2dp"
+                            android:hint="Amount (Max. 20000)"
+                            android:inputType="number"
+                            android:maxLength="5"
+                            android:maxLines="1"
+                            android:nextFocusDown="@+id/gift_voucher_who"
+                            android:textColor="#313031"
+                            android:textColorHint="#707070"
+                            android:textCursorDrawable="@null"
+                            android:textSize="17dp" />
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_marginLeft="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:text="Gift Voucher"
+                        android:textSize="17dp" />
+
+                </LinearLayout>
+
+                <FrameLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:background="#D6D6D6">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/_2sdp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/user_icon" />
+
+                        <EditText
+                            android:id="@+id/gift_voucher_who"
+
+                            style="@style/MyAutoCompleteTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_6sdp"
+                            android:layout_marginTop="2dp"
+                            android:hint="Who are you getting for this?"
+                            android:inputType="text"
+                            android:maxLength="50"
+                            android:maxLines="1"
+                            android:nextFocusDown="@+id/gift_voucher_msg"
+                            android:textColor="#313031"
+                            android:textColorHint="#707070"
+                            android:textCursorDrawable="@null"
+                            android:textSize="17dp" />
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:background="#D6D6D6">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/_2sdp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/zip_icon" />
+
+                        <EditText
+                            android:id="@+id/gift_voucher_msg"
+
+                            style="@style/MyAutoCompleteTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_6sdp"
+                            android:layout_marginTop="2dp"
+                            android:hint="Provide message to receiver"
+                            android:inputType="text"
+                            android:maxLength="80"
+                            android:maxLines="3"
+                            android:textColor="#313031"
+                            android:textColorHint="#707070"
+                            android:textSize="17dp" />
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+
+                    android:id="@+id/layout_emailaddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="#D6D6D6">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/_2sdp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/email_icon" />
+
+                        <EditText
+                            android:id="@+id/gift_voucher_amount_email"
+                            style="@style/MyAutoCompleteTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_6sdp"
+                            android:layout_marginTop="2dp"
+                            android:hint="Email Address"
+                            android:imeOptions="actionDone"
+                            android:inputType="textWebEmailAddress"
+                            android:textColor="#313031"
+                            android:textColorHint="#707070"
+                            android:textSize="17dp" />
+                    </LinearLayout>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/layout_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:background="#D6D6D6">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/_2sdp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/address_icon" />
+
+                        <EditText
+                            android:id="@+id/gift_voucher_addres"
+                            style="@style/MyAutoCompleteTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_6sdp"
+                            android:layout_marginTop="2dp"
+                            android:hint="Address"
+                            android:inputType="text"
+                            android:maxLines="3"
+                            android:nextFocusDown="@+id/gift_voucher_phone"
+                            android:textColor="#313031"
+                            android:textColorHint="#707070"
+                            android:textSize="17dp" />
+                    </LinearLayout>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/layout_phonenumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="20dp"
+                    android:background="#D6D6D6">
+
+                    <LinearLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="45dp"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:orientation="horizontal"
+
+                        android:paddingLeft="@dimen/_2sdp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/pho_icon" />
+
+                        <EditText
+                            android:id="@+id/gift_voucher_phone"
+                            style="@style/MyAutoCompleteTextView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="@dimen/_4sdp"
+                            android:layout_marginTop="2dp"
+                            android:hint="Phone Number"
+                            android:imeOptions="actionDone"
+                            android:inputType="phone"
+                            android:maxLength="12"
+                            android:maxLines="1"
+                            android:textColor="#313031"
+                            android:textColorHint="#707070"
+                            android:textSize="17dp" />
+                    </LinearLayout>
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ly_bar_bottom"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/giftvoucher_submit_bt"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/colorSkyBlue"
+            android:text="Checkout"
+            android:textColor="@color/colorWhite"
+            android:textSize="17dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,103 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <FrameLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_36sdp"
+        android:background="#0097db">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="Arial"
+            android:lines="1"
+            android:padding="5dp"
+            android:text="My Orders"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+        <Button
+            android:id="@+id/register_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="#0079b0"
+            android:text="Back"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <TableLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:shrinkColumns="*"
+        android:stretchColumns="*">
+
+        <!-- Row 3 with 2 columns -->
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal">
+
+            <TextView
+                android:id="@+id/current_txt"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="10dip"
+                android:text="CURRENT"
+                android:textStyle="bold"
+                android:textColor="#000000" />
+
+            <TextView
+                android:id="@+id/previous_txt"
+                android:layout_weight="1"
+                android:background="#000"
+                android:gravity="center"
+                android:padding="10dip"
+                android:textStyle="bold"
+                android:text="PREVIOUS"
+                android:textColor="#FFF" />
+        </TableRow>
+    </TableLayout>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+
+        android:id="@+id/status_label"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:fontFamily="Arial"
+        android:lines="1"
+        android:padding="5dp"
+        android:text="You have no appointments"
+        android:textColor="#707070"
+        android:textSize="16sp"
+        android:typeface="serif" />
+
+    <ListView
+        android:id="@+id/myorder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="5dp"
+        android:scrollbars="vertical"/>
+</FrameLayout>
+</LinearLayout>

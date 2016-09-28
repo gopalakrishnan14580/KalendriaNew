@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_36sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:background="#0097db">
+
+        <TextView
+
+            android:id="@+id/subcatagory_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="Arial"
+            android:lines="1"
+            android:padding="5dp"
+            android:text="My Cart"
+            android:textColor="@android:color/white"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+
+    </FrameLayout>
+
+    <TextView
+
+        android:id="@+id/status_label"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+
+        android:fontFamily="Arial"
+        android:lines="1"
+        android:padding="5dp"
+        android:text="My cart is empty"
+        android:textColor="#707070"
+        android:textSize="16sp"
+        android:textStyle="normal"
+        android:typeface="serif" />
+
+    <ListView
+        android:id="@+id/subcatagory_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/transparent_background"/>
+</LinearLayout>

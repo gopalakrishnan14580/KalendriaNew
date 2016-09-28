@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#0097db"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/service_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:gravity="left"
+        android:hint="Hair Bleaching Chain"
+        android:textColor="@color/colorWhite"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/staff_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:gravity="left"
+        android:hint="Staff : Durai murugan"
+        android:textColor="@color/colorWhite"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/day_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="2dp"
+        android:hint="Wednesday ,13 Apr ,2016"
+        android:textColor="@color/colorWhite"
+        android:textSize="16dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/dourition_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="2dp"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:hint="15 : 15 - 15 : 20"
+            android:textColor="@color/colorWhite"
+            android:textSize="16dp" />
+
+        <TextView
+            android:id="@+id/confirm_oder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_3sdp"
+            android:fontFamily="Arial"
+            android:gravity="right"
+            android:hint="Confirmed"
+            android:background="@drawable/roundshapebtn"
+            android:lines="1"
+            android:padding="5dp"
+            android:textColor="@android:color/white"
+            android:textSize="16dp"
+            android:typeface="serif" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="3dp"
+        android:background="#D6D6D6" />
+
+</LinearLayout>

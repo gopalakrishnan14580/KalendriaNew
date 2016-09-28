@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_36sdp"
+        android:background="#0097db">
+
+        <TextView
+            android:id="@+id/title_venue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="Arial"
+            android:lines="1"
+            android:text="Venue"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:visibility="visible"/>
+        <TextView
+            android:id="@+id/title_services"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="Arial"
+            android:lines="1"
+            android:text="Services"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/title_review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="Arial"
+            android:lines="1"
+            android:text="Reviews"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:visibility="gone"/>
+        <TextView
+            android:id="@+id/title_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:layout_marginLeft="15dp"
+            android:fontFamily="Arial"
+            android:lines="1"
+            android:text="Location"
+            android:textColor="@android:color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:visibility="gone"/>
+
+        <Button
+            android:id="@+id/register_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="#0079b0"
+            android:text="Back"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadingEdgeLength="0dp"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    android:background="@android:color/white"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:descendantFocusability="blocksDescendants"
+        android:orientation="vertical">
+
+
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp">
+
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@drawable/bg"
+                android:scrollbarAlwaysDrawHorizontalTrack="true" />
+
+            <com.viewpagerindicator.CirclePageIndicator
+                android:id="@+id/indicator"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:padding="10dp" />
+
+            <include
+                android:id="@+id/hoteldetails"
+                layout="@layout/selectedvenuadapterchild"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:background="#0097db"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:id="@+id/venue_text"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_weight="1"
+                android:background="#fff"
+                android:gravity="center"
+                android:text="VENUE"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/venue_service_buttton"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="SERVICES"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/venue_review_txt"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="REVIEWS"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/venue_location_txt"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="LOCATION"
+                android:textColor="#fff"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/review_total"
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:background="#e8101010"
+            android:gravity="left|center"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:id="@+id/total_review_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="1"
+                android:gravity="left"
+                android:maxLines="1"
+                android:text="15 REVIEW "
+                android:textColor="#fff"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <RatingBar
+                android:id="@+id/total_review_rb"
+                android:progressDrawable="@drawable/star_rating_small"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_marginRight="5dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/thumbnail"
+                android:gravity="right"
+                android:numStars="5"
+                android:stepSize="1" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:visibility="visible"
+            android:id="@+id/venue_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="left"
+                android:padding="5dp"
+                android:text="ADDRESS"
+                android:textColor="#0097db"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/city_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="left"
+                android:padding="5dp"
+                android:text="Location Text one"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/relign_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="left"
+                android:padding="5dp"
+                android:text="Location Text two"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="left"
+                android:padding="5dp"
+                android:text="+9043147655"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/email_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="left"
+                android:padding="5dp"
+                android:text="cse406@gmail.com"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/website_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="left"
+                android:padding="5dp"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+
+            <TextView
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="left"
+                android:padding="5dp"
+                android:text="OPENING HOURS"
+                android:textColor="#0097db"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+
+            <com.kalendria.kalendria.utility.NonScrollListView
+                android:id="@+id/list_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:dividerHeight="@dimen/_1sdp"
+                android:divider="@color/transparent_background"
+                android:padding="1dp"
+                android:scrollbars="none" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="left"
+                android:padding="5dp"
+                android:text="PARKING"
+                android:textColor="#0097db"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/parking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="left"
+                android:padding="5dp"
+                android:textColor="@android:color/black"
+                android:text="Available" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/service_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ExpandableListView
+                android:id="@+id/lvExp"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:groupIndicator="@null" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/location_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"
+            android:padding="5dp"
+            android:visibility="gone">
+
+            <fragment
+                android:id="@+id/map"
+                android:name="com.google.android.gms.maps.SupportMapFragment"
+                android:layout_width="match_parent"
+                android:layout_height="0dip"
+                android:layout_weight="1"
+                android:apiKey="AIzaSyAZo5FYfmqgv4u_PXb04lAYv3wkluAXTao" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/reate_us"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:dividerHeight="2dp"
+                android:paddingTop="5dp"
+                android:paddingLeft="5dp"
+                android:paddingRight="5dp"
+                android:layout_above="@+id/ratus_layout"
+
+                android:scrollbars="none"
+                android:visibility="visible" />
+
+            <LinearLayout
+                android:id="@+id/ratus_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:paddingBottom="0dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:gravity="center|bottom"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <Button
+                    android:id="@+id/review_rateus_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5sp"
+                    android:background="#0097db"
+                    android:fontFamily="Arial"
+                    android:gravity="center"
+                    android:lines="1"
+                    android:padding="5dp"
+                    android:text="RATE US"
+                    android:textAllCaps="true"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:typeface="serif"
+                     />
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</ScrollView>
+    </LinearLayout>

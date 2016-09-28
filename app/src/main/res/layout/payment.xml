@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <FrameLayout
+
+            android:layout_width="match_parent"
+
+            android:layout_height="@dimen/_36sdp"
+            android:background="#0097db">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:layout_marginLeft="10dp"
+                android:fontFamily="Arial"
+                android:lines="1"
+                android:padding="5dp"
+                android:text="Payment"
+                android:textColor="@android:color/white"
+                android:textSize="19sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+            <Button
+                android:id="@+id/register_back_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:background="#0079b0"
+                android:text="Back"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
+        </FrameLayout>
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="30dp"
+            android:gravity="center|bottom"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/register_register_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:fontFamily="Arial"
+                android:padding="10dp"
+                android:text="Don't worry about making an online payment now! if you cancel your appointment prior to the booking time, the amount will be refunded back into your Kalendria wallet and you will be able to use it for services on Kalendria in the future.You can access your wallet by logging into your profile page. For details , please refer to Kalendria's Cancellation and Refund policies."
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:typeface="serif" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center|bottom"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/paywithloyality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_1sdp"
+                android:background="#018CD6"
+                android:fontFamily="Arial"
+                android:gravity="center"
+                android:lines="1"
+                android:padding="5dp"
+                android:text="Pay with Loyalty (00)"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:typeface="serif" />
+
+            <Button
+                android:id="@+id/continuebtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="#018CD6"
+                android:fontFamily="Arial"
+                android:gravity="center"
+                android:lines="1"
+                android:padding="5dp"
+                android:text="Continue"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:typeface="serif" />
+
+
+            <Button
+                android:id="@+id/paywithvenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="#2EABAE"
+                android:fontFamily="Arial"
+                android:gravity="center"
+                android:lines="1"
+                android:padding="5dp"
+                android:text="Pay at Venue"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:typeface="serif" />
+
+            <Button
+                android:id="@+id/paypaybtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="#2c9139"
+                android:fontFamily="Arial"
+                android:gravity="center"
+                android:lines="1"
+                android:text="Pay with Payfort"
+                android:textColor="@android:color/white"
+                android:drawableLeft="@drawable/payfort"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingRight="@dimen/_60sdp"
+                android:typeface="serif" />
+            <Button
+                android:id="@+id/paywithvalletbtn"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_marginTop="@dimen/_4sdp"
+                android:background="#b4b8ba"
+                android:fontFamily="Arial"
+                android:gravity="center"
+                android:lines="1"
+                android:paddingLeft="@dimen/_15sdp"
+                android:paddingRight="@dimen/_60sdp"
+                android:text="Pay with Wallet"
+                android:drawableLeft="@drawable/paywalet"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+
+                android:typeface="serif" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>

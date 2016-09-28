@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_marginRight="10dp"
+    android:layout_marginLeft="5dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/daysname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="5dp"
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        android:text="Name : "
+        android:textSize="12dp" />
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/bgImageView"
+            android:background="@drawable/button_circle_grey"
+            android:layout_gravity="center_horizontal|center_vertical"
+            android:layout_width="30dp"
+            android:layout_height="30dp" />
+        <TextView
+            android:id="@+id/daysvalue"
+            android:layout_gravity="center_horizontal"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:gravity="center"
+            android:textColor="@color/colorBlack"
+            android:textStyle="normal"
+            android:layout_width="35dp"
+            android:layout_height="30dp"
+            android:text="31"
+            android:textSize="16dp"/>
+    </FrameLayout>
+
+</LinearLayout>

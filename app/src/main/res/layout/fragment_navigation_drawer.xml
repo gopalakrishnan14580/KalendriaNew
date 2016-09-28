@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000"
+        android:orientation="horizontal">
+        <!-- Thumbnail Image -->
+        <ImageView
+
+            android:layout_width="150dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="10dp"
+            android:src="@drawable/logo_white" />
+
+        <ImageView
+            android:id="@+id/navigation_close"
+            android:layout_width="wrap_content"
+            android:layout_height="60dp"
+            android:layout_gravity="center|end"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="5dp"
+            android:padding="10dp"
+            android:src="@drawable/close_icon" />
+
+    </LinearLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/slider_rl"
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:layout_below="@+id/headerLayout"
+        android:adjustViewBounds="true"
+        android:background="@android:color/darker_gray"
+        android:scaleType="centerCrop">
+
+        <ImageView
+            android:id="@+id/fullImage"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:src="@drawable/avatar_men_wide"
+            android:scaleType="fitXY" />
+
+
+        <!-- Thumbnail Image -->
+        <ImageView
+            android:id="@+id/thumbnail"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="7dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="8dp"
+            android:padding="@dimen/_2sdp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/avatar_men_new"
+            android:background="@drawable/squareboarder"
+            android:scaleType="centerCrop" />
+
+        <TextView
+            android:id="@+id/fullname"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/emailTextView"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:fontFamily="Arial"
+            android:layout_marginBottom="7dp"
+            android:singleLine="true"
+            android:text="Longname LongFamname"
+            android:textColor="#fff"
+            android:textSize="15dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/emailTextView"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="1dip"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:fontFamily="Arial"
+            android:lines="1"
+            android:text="longname@gmail.com"
+            android:textColor="#fff"
+            android:textSize="10sp"
+            android:textStyle="normal"
+            android:typeface="serif" />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/WalletLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000"
+        android:orientation="horizontal">
+        <!-- Thumbnail Image -->
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:background="@drawable/wallet2"
+            android:layout_margin="5dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:text="Loyalty"
+                android:fontFamily="Arial"
+                android:singleLine="true"
+                android:textColor="#fff"
+                android:textSize="15dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:id="@+id/loyaltyTextField"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="0"
+                android:fontFamily="Arial"
+                android:singleLine="true"
+                android:textColor="#fff"
+                android:textSize="15dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:background="@drawable/wallet2"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:text="Wallet"
+                android:fontFamily="Arial"
+                android:singleLine="true"
+                android:textColor="#fff"
+                android:textSize="15dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+
+                />
+
+            <TextView
+                android:id="@+id/walletTextField"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="0"
+                android:fontFamily="Arial"
+                android:singleLine="true"
+                android:textColor="#fff"
+                android:textSize="15dp"
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+
+                />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/drawerList"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/relativeLayout"
+        android:background="#000" />
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+    </RelativeLayout>
+</LinearLayout>

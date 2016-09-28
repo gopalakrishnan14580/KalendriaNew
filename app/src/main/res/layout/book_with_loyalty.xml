@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical">
+
+    <FrameLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_36sdp"
+        android:background="#0097db">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="Arial"
+            android:lines="1"
+            android:padding="5dp"
+            android:text="Book with Loyalty"
+            android:textColor="@android:color/white"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+        <Button
+            android:id="@+id/register_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="#0079b0"
+            android:text="Back"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            android:visibility="invisible" />
+    </FrameLayout>
+
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff"
+        android:shrinkColumns="*"
+        android:stretchColumns="*">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_10sdp">
+
+
+            <LinearLayout
+                android:layout_width="122dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                     android:paddingBottom="0dip"
+                    android:paddingTop="14dip"
+                    android:text="Min"
+                    android:textColor="#000000"
+
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="122dp"
+                    android:layout_height="@dimen/_35sdp"
+
+                    android:layout_marginRight="@dimen/_8sdp"
+                    android:background="#D6D6D6"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_5sdp">
+
+
+                    <EditText
+                        android:id="@+id/maximum_et"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/rectange_border_bookwithloyality"
+                        android:digits="0123456789."
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:hint="0"
+                        android:inputType="numberDecimal"
+                        android:maxLength="6"
+                        android:singleLine="true"
+                        android:textColor="@color/colorSkyBlue"
+                        android:textCursorDrawable="@null" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_7sdp"
+                        android:text="Points"
+                        android:textColor="#0097db" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="122dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_8sdp"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_45sdp"
+                    android:gravity="left"
+                    android:paddingBottom="0dip"
+                    android:paddingTop="14dip"
+                    android:text="Max"
+                    android:textColor="#000000"
+
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:layout_width="122dp"
+                    android:layout_height="@dimen/_35sdp"
+                    android:layout_weight="1"
+                    android:background="#D6D6D6">
+
+
+                    <EditText
+                        android:id="@+id/minimum_et"
+                        android:layout_width="@dimen/_50sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_gravity="center"
+                        android:background="@drawable/rectange_border_bookwithloyality"
+                        android:digits="0123456789."
+                        android:focusableInTouchMode="true"
+                        android:gravity="center"
+                        android:hint="0"
+                        android:inputType="numberDecimal"
+                        android:maxLength="6"
+                        android:layout_marginLeft="5dp"
+                        android:singleLine="true"
+                        android:textColor="@color/colorSkyBlue"
+                        android:textCursorDrawable="@null" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_7sdp"
+                        android:text="Points"
+                        android:textColor="#0097db" />
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:layout_marginRight="@dimen/_8sdp"
+                android:layout_weight="1"
+
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:gravity="left"
+                    android:paddingBottom="0dip"
+                    android:paddingTop="14dip"
+                    android:text="Max"
+                    android:textColor="#000000"
+                    android:textStyle="bold"
+                    android:visibility="invisible" />
+
+                <LinearLayout
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="@dimen/_35sdp"
+
+                    android:layout_gravity="right|center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+
+                        android:id="@+id/searchImage"
+                        android:layout_width="@dimen/_35sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:layout_gravity="right|center_vertical"
+                        android:background="@drawable/rectange_border_bookwithloyality"
+                        android:padding="8dp"
+                        android:src="@drawable/searchs"
+
+                        />
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </TableLayout>
+
+
+    <ListView
+        android:id="@+id/lv_book_with_loyalty"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:divider="@color/transparent_background"/>
+
+    <TextView
+        android:id="@android:id/empty"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="#707070"
+        android:text="@string/empty_list" />
+
+</LinearLayout>

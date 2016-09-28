@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_marginTop="0dp"
+        android:layout_width="match_parent"
+        android:paddingTop="5dp"
+        android:layout_height="wrap_content">
+
+
+    <TextView
+        android:id="@+id/gift_code"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="FT545SX"
+        android:gravity="center"
+        android:textColor="@color/colorBlack"
+        android:textStyle="normal"
+        android:textSize="@dimen/_12sdp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_marginTop="0dp"
+        android:layout_width="match_parent"
+        android:paddingTop="5dp"
+        android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/gift_type"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+
+        android:text="eVoucher"
+        android:gravity="center"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_12sdp" />
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:layout_marginTop="0dp"
+        android:layout_width="match_parent"
+        android:paddingTop="5dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/gift_remaining"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.95"
+            android:text="88"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_12sdp" />
+    </LinearLayout>
+
+
+
+</LinearLayout>

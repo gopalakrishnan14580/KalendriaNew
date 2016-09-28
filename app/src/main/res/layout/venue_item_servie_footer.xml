@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="horizontal"
+    android:paddingTop="2dip">
+
+
+        <Button
+            android:id="@+id/review_rateus_btn1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5sp"
+            android:background="#0097db"
+            android:fontFamily="Arial"
+            android:gravity="center"
+            android:lines="1"
+            android:padding="5dp"
+            android:text="RATE US"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:typeface="serif"
+            android:visibility="visible" />
+
+</LinearLayout>

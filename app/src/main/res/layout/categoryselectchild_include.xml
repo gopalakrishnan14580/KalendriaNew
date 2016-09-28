@@ -1,0 +1,111 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/hotelDetailsParent"
+        android:layout_width="match_parent"
+        android:layout_height="95dp"
+        android:background="@drawable/gradientbar">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_toLeftOf="@+id/maplayout"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+
+            <RatingBar
+                android:id="@+id/ratingbar"
+                android:progressDrawable="@drawable/star_rating_small"
+                style="?android:attr/ratingBarStyleSmall"
+                android:layout_width="wrap_content"
+                android:layout_height="16dp"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_alignParentRight="true"
+                android:layout_alignTop="@+id/thumbnail"
+                android:numStars="5"
+                android:stepSize="0.5" />
+
+            <TextView
+
+                android:id="@+id/venu_name_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="left"
+                android:maxLines="1"
+                android:text="Venue Name "
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/service_title_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="left"
+                android:maxLines="1"
+                android:text="Serive Title"
+                android:textColor="#fff"
+                android:textSize="16sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/venulocation_tet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="left"
+                android:maxLines="1"
+                android:text="Venue Location"
+                android:textColor="#0097db"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/maplayout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="bottom"
+            android:orientation="vertical">
+
+            <TextView
+
+                android:id="@+id/normal_price_text"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:background="#262525"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="800 AED"
+                android:textStyle="bold"
+                android:textColor="#fff">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/discount_price_txt"
+                android:layout_width="80dp"
+                android:layout_height="40dp"
+                android:background="#0097db"
+                android:gravity="center"
+                android:singleLine="true"
+                android:textStyle="bold"
+                android:text="500AED"
+                android:textColor="#fff"
+
+                />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

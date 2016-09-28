@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:id="@+id/rate"
+    android:descendantFocusability="beforeDescendants"
+    android:focusableInTouchMode="false"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:id="@+id/filter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/cross_image_Rateus"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:layout_marginLeft="10dp"
+            android:background="@android:color/black"
+            android:textColor="@android:color/white"
+            android:text="X"
+            android:clickable="true"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold"/>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/rate_Header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="0dp"
+        android:text="RATE"
+        android:textColor="#0097db"
+        android:textSize="15sp"
+        android:textStyle="bold"/>
+
+
+    <TextView
+        android:id="@+id/overall_Satisfication"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="3dp"
+        android:text="Overall Satisfaction"
+        android:layout_gravity="center"
+        android:textSize="14sp"
+        android:textColor="#000000"/>
+
+    <RatingBar
+        android:id="@+id/star_Rating"
+        android:progressDrawable="@drawable/star_rating_big"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_horizontal"
+        android:numStars="5"
+        android:textColor="#000000"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/write_Review"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:text="Write your Review"
+        android:textColor="#0097db"
+        android:textAllCaps="true"
+        android:textSize="15sp"
+        android:textStyle="bold" />
+    <LinearLayout
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:layout_width="0px"
+        android:layout_height="0px"/>
+    <EditText
+        android:id="@+id/user_Review"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="5dp"
+        android:textColor="#000000"
+        android:gravity="center"
+        android:background="@drawable/rectange_border_gray"
+        android:textSize="16sp" />
+
+
+    <Button
+        android:id="@+id/btn_Postreview"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="#D6D6D6"
+        android:text="Post Review"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:textSize="16sp"
+        android:textAllCaps="true"/>
+
+
+</LinearLayout>

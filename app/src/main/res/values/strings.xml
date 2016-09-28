@@ -1,0 +1,85 @@
+<resources>
+    <string name="app_name">Kalendria</string>
+
+    <string name="sign_out">Sign Out</string>
+    <string name="disconnect">Disconnect</string>
+
+<!--    <string name="facebook_app_id">231842707152422</string> -->
+    <string name="facebook_app_id">1160325290654203</string>
+
+    <string name="discuss_about_header">Choose your city</string>
+    <!-- By murugan -->
+    <!-- menu.xml -->
+    <string name="action_search">Navigation Drawer</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+    <string name="choose_enquiry">Select city</string>
+
+    <!--
+    debug
+    01:D4:FC:27:14:8B:CE:E7:5E:11:9C:ED:12:7B:C2:1D:29:35:BA:B5
+release
+    EA:39:50:6D:84:A9:EA:D0:68:0D:9A:E0:9F:52:33:C1:97:B9:57:BD -->
+
+
+    <string name="nav_item_home">HOME</string>
+    <string name="nav_item_friends">PROFILE</string>
+    <string name="nav_item_notifications">MY ORDERS</string>
+
+    <string name="nav_item_images">BOOK WITH LOYALTY</string>
+    <string name="nav_item_settings">FAVOURITES</string>
+    <string name="nav_item_match_preference">MY CART</string>
+    <string name="nav_item_gift">GIFT</string>
+    <string name="nav_item_about_us">LOG OUT</string>
+
+    <!-- navigation drawer item labels  -->
+    <string-array name="nav_drawer_labels">
+        <item>@string/nav_item_home</item>
+        <item>@string/nav_item_friends</item>
+        <item>@string/nav_item_notifications</item>
+        <item>@string/nav_item_images</item>
+        <item>@string/nav_item_settings</item>
+        <item>@string/nav_item_match_preference</item>
+        <item>@string/nav_item_gift</item>
+        <item>@string/nav_item_about_us</item>
+
+    </string-array>
+
+   <string-array name="frag_icon_names">
+        <item>@drawable/home_icon</item>
+        <item>@drawable/profile_icon</item>
+       <item>@drawable/cart_new_icon</item>
+        <item>@drawable/book_with_loyalty_icon</item>
+        <item>@drawable/fav_icon</item>
+        <item>@drawable/my_order_icon</item>
+       <item>@drawable/gift_icon</item>
+        <item>@drawable/logout_icon</item>
+
+
+    </string-array>
+    <string name="not_available">Sorry, this time is not available for booking</string>
+    <string name="duration_animation">200</string>
+    <string name="net_error_timeout">Timeout</string>
+    <string name="net_error_connect_network">Host Exception Error</string>
+    <string name="net_error_no_network">No Network</string>
+    <string name="net_error_auth_failure">Authticaion Failure </string>
+    <string name="net_error_server">Server Error</string>
+    <string name="net_error_null_pointer">Null Point Exception</string>
+    <string name="request_failed">Unable to precess your request! try again later</string>
+    <string name="net_error_unkown">Unknow Error</string>
+
+    <string name="reason1">Venue can\'t accommodate booking</string>
+    <string name="reason2">I found a better deal</string>
+    <string name="reason3">I booked by mistake</string>
+    <string name="reason4">My Plans have changed</string>
+    <string name="reason5">Weekly once cleaning</string>
+
+    <string name="google_app_id">1062396462460</string>
+
+
+    <string name="empty_list">Booking service not available</string>
+
+    <string name="crop">Crop</string>
+
+
+</resources>

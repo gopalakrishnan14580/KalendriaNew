@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_36sdp"
+        android:background="#0097db">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="Arial"
+            android:lines="1"
+            android:padding="5dp"
+            android:text="Appointment Details"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+        <Button
+            android:id="@+id/appointment_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="#0079b0"
+            android:text="Back"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="#D6D6D6"
+                android:padding="8dp">
+
+                <ImageView
+                    android:id="@+id/thumbnail"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="8dp"
+                    android:background="@drawable/faverote_icon" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_40sdp"
+                    android:gravity="left"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/oder_buisiness_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="1"
+                        android:text="Beauty Spa"
+                        android:textColor="#000"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold" />
+
+
+                    <TextView
+                        android:id="@+id/order_city_region"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:text="Abu Hali,Dubai"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+
+            <com.kalendria.kalendria.utility.NonScrollListView
+                android:id="@+id/appointment_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="2dp"
+                android:scrollbars="none" />
+
+            <LinearLayout
+                android:id="@+id/cancelLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="10dp"
+                android:background="#D6D6D6">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/cancel_textView_label"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:text="Plan Changed? Cancel your order." />
+
+                    <TextView
+                        android:id="@+id/cancel_textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="5dp"
+                        android:text="                                    "
+                        android:textColor="#0097db" />
+
+                </FrameLayout>
+            </LinearLayout>
+
+            <TableLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:stretchColumns="1">
+
+
+                <TableRow
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginLeft="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:text="Payment Details:"
+                        android:textColor="#4e97cf"
+                        android:textSize="@dimen/_16sdp"
+                        android:textStyle="normal" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp">
+
+                    <TextView
+
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Order Status"
+                        android:textColor="#000"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/order_status"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text=": Confirmed"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp">
+
+                    <!-- Column 1 -->
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Payment Type"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <!-- Column 2 -->
+                    <TextView
+                        android:id="@+id/payment_type"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Pay At Venue"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Payment Status"
+                        android:textColor="#000"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/payment_status"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Incomplete"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Order Total"
+                        android:textColor="#000"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/order_total"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="2AED"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow2"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp">
+
+                    <TextView
+                        android:id="@+id/txtvenue_label"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Pay at Checkout"
+                        android:textColor="#000"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/txtcheckout"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="2AED"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRow1"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp">
+
+                    <TextView
+                        android:id="@+id/textView1"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Pay at Venue"
+                        android:textColor="#000"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/textvenu"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="2AED"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRowPromo"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Promo Code Value"
+                        android:textColor="#000"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/textpromo"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="2AED"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/tableRowGift"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Gift Voucher Value"
+                        android:textColor="#000"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/textgift"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="2AED"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+
+                </TableRow>
+
+
+            </TableLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/venue_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:text="You will be charged by the venue after your appointment"
+                    android:textColor="#242526"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="normal" />
+
+            </LinearLayout>
+
+
+            <TableLayout
+                android:id="@+id/tableLayoutOften"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:stretchColumns="1">
+
+                <TableRow
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:text="Other Details:"
+                        android:textColor="#4e97cf"
+                        android:textSize="@dimen/_16sdp"
+                        android:textStyle="normal" />
+
+                </TableRow>
+
+
+                <TableRow
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp">
+
+                    <TextView
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="How Often"
+                        android:textColor="#000"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="normal" />
+
+                    <TextView
+                        android:id="@+id/how_often"
+                        android:layout_width="0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text=": Just Once"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                </TableRow>
+            </TableLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:gravity="left"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/oder_name_sub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:text="Beauty Spa"
+                    android:textColor="#4e97cf"
+                    android:textSize="@dimen/_16sdp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/faverote_venu_name_txt166"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:text="Address: "
+                    android:textColor="#4e97cf"
+                    android:textSize="@dimen/_14sdp" />
+
+                <TextView
+                    android:id="@+id/oder_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="Google Google "
+                    android:textColor="#242628"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/oder_phone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="9326548977 "
+                    android:textColor="#242628"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/oder_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="sheik@twilightsoftwares.com "
+                    android:textColor="#242628"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/order_website"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:text="www.twilightsoftwares.com"
+                    android:textColor="#242628"
+                    android:textSize="@dimen/_12sdp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/faverote_venu_name_txt169"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:text="Parking Details:"
+                    android:textColor="#4e97cf"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="normal" />
+
+                <TextView
+                    android:id="@+id/oder_parking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:text="Free Parking"
+                    android:textColor="#474e53"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/location_ll"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:visibility="visible">
+
+                <fragment
+                    android:id="@+id/map_appointment_details"
+                    android:name="com.google.android.gms.maps.SupportMapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="250dip"
+                    android:layout_weight="1"
+                    android:apiKey="AIzaSyAZo5FYfmqgv4u_PXb04lAYv3wkluAXTao" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

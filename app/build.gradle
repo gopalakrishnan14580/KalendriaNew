@@ -1,0 +1,133 @@
+apply plugin: 'com.android.application'
+
+android {
+
+    signingConfigs {
+        config {
+            keyAlias 'Kalendria'
+            //storeFile file('G:\\Murugan WorkSpace TW\\Kalendria')
+            //storeFile file('F:\\tricks & tips\\vasanth\\Kalendria')
+            keyPassword '123456'
+            storePassword '123456'
+        }
+        packagingOptions {
+            exclude 'META-INF/DEPENDENCIES.txt'
+            exclude 'META-INF/DEPENDENCIES'
+            exclude 'META-INF/LICENSE.txt'
+            exclude 'META-INF/LICENSE'
+            exclude 'META-INF/NOTICE.txt'
+            exclude 'META-INF/NOTICE'
+            exclude 'META-INF/LGPL2.1'
+        }
+        dexOptions {
+            javaMaxHeapSize "4g"
+            preDexLibraries = false
+        }
+    }
+
+    compileSdkVersion 23
+    buildToolsVersion "23.0.2"
+
+
+    defaultConfig {
+        applicationId "com.kalendria.kalendria"
+        minSdkVersion 16
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+
+        signingConfig signingConfigs.config
+
+        // Enabling multidex support.
+
+        multiDexEnabled true
+
+    }
+
+    /*buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }*/
+
+
+    productFlavors {
+    }
+
+
+    sourceSets {
+        main {
+            aidl.srcDirs = ['src/main/java']
+            assets.srcDirs = ['src/main/assets', 'src/main/assets/']
+        }
+    }
+
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+}
+
+
+
+repositories {
+    mavenCentral()
+}
+
+buildscript {
+    repositories {
+        maven { url "http://dl.bintray.com/populov/maven" }
+        mavenCentral()
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url "https://jitpack.io" }
+        maven { url "http://dl.bintray.com/populov/maven" }
+        mavenCentral()
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+
+    compile files('libs/volley.jar')
+    compile files('libs/universal-image-loader-1.9.4.jar')
+    //Google analytics
+    //Other thid party library
+    //Retrofit for web service
+    compile 'com.android.support:multidex:1.0.0'
+    compile 'commons-codec:commons-codec:1.10'
+    compile 'org.apache.commons:commons-lang3:3.4'
+
+    compile 'com.android.support:appcompat-v7:23.1.1'
+    compile 'com.android.support:support-v4:23.1.1'
+    compile 'com.android.support:design:23.1.1'
+    compile 'com.facebook.android:facebook-android-sdk:4.2.0'
+    compile 'com.android.support:recyclerview-v7:23.1.1'
+    compile 'com.squareup.picasso:picasso:2.5.0'
+    compile 'fr.avianey.com.viewpagerindicator:library:2.4.1.1@aar'
+    compile 'com.google.android.gms:play-services:8.4.0'
+    compile 'com.intuit.sdp:sdp-android:1.0.2'
+    compile "com.daimajia.swipelayout:library:1.2.0@aar"
+
+    compile files('libs/httpmime-4.3.6.jar')
+    compile files('libs/httpclient-4.3.6.jar')
+    compile files('libs/httpcore-4.3.3.jar')
+
+    compile 'com.github.michaelye.easydialog:easydialog:1.4'
+    compile 'com.github.siyamed:android-shape-imageview:0.9.+@aar'
+    compile 'com.github.douglasjunior:android-simple-tooltip:0.1.1'
+    /* it is very important for download rounded image*/
+    compile 'com.makeramen:roundedimageview:2.2.1'
+    compile project(path: ':NxttyCropper')
+    compile 'com.flurry.android:analytics:6.3.1'
+    compile 'com.android.support:multidex:1.0.1'
+}

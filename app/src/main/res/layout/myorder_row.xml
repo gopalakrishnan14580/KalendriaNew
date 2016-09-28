@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="#D6D6D6"
+    android:padding="8dp">
+
+
+    <TextView
+        android:id="@+id/myorder_date"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dip"
+        android:layout_toRightOf="@+id/thumbnail"
+        android:text="22 may"
+        android:textColor="#000"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="normal" />
+
+    <TextView
+        android:id="@+id/myorder_time"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/myorder_date"
+        android:layout_marginTop="5dp"
+        android:gravity="left"
+        android:text="17:30"
+        android:textColor="#0097db"
+        android:textSize="@dimen/_12sdp" />
+
+    <TextView
+        android:id="@+id/myorder_venu_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/myorder_date"
+        android:paddingLeft="@dimen/_2sdp"
+        android:layout_marginTop="5dip"
+        android:text="LADIES SALON SHANGRI LA"
+        android:textColor="@android:color/black"
+        android:textSize="@dimen/_12sdp" />
+    <TextView
+        android:id="@+id/myorder_service_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/myorder_time"
+        android:layout_below="@+id/myorder_venu_name"
+        android:layout_marginTop="5dip"
+        android:paddingLeft="@dimen/_2sdp"
+        android:text="hand massage"
+        android:textColor="#707070"
+        android:textSize="@dimen/_12sdp" />
+
+    <TextView
+        android:id="@+id/temp"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/myorder_time"
+        android:layout_marginTop="5dp"
+        android:gravity="left"
+        android:text=""
+        android:textColor="#0097db"
+        android:textSize="@dimen/_12sdp" />
+
+    <TextView
+        android:id="@+id/myorder_price_or_points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/myorder_service_name"
+        android:layout_marginTop="5dip"
+        android:layout_toRightOf="@+id/temp"
+        android:text="hand massage"
+        android:paddingLeft="@dimen/_2sdp"
+        android:textColor="#707070"
+        android:textSize="@dimen/_12sdp" />
+    <TextView
+        android:id="@+id/myorder_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="completd"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_11sdp"
+        android:padding="@dimen/_5sdp"
+        android:background="@drawable/roundshapebtn"
+        android:layout_alignTop="@+id/myorder_price_or_points"
+        android:layout_alignRight="@+id/myorder_service_name"
+        android:layout_alignEnd="@+id/myorder_service_name"
+       />
+</RelativeLayout>

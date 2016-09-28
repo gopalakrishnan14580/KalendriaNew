@@ -1,0 +1,62 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/hotelDetailsParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00000000"
+        android:gravity="left|center"
+        android:orientation="horizontal">
+
+
+        <TextView
+
+            android:id="@+id/listText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:maxLines="2"
+            android:text="Venue Name "
+            android:textColor="#000"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+        <!--<RatingBar
+            android:id="@+id/ratingbar_venue_items"
+            style="@style/foodRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="6dp" />-->
+
+        <RatingBar
+            android:id="@+id/post_review_array_retting_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+
+        <LinearLayout
+            android:id="@+id/post_r"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:gravity="right">
+
+            <TextView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_toLeftOf="@+id/ratingbar_venue_items"
+                android:background="@drawable/delete"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="#fff" />
+            <!--  android:isIndicator="true"-->
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

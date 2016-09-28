@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "313047412167",
+    "project_id": "norse-ego-122504"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:313047412167:android:d6ac1f4dc21c2a30",
+        "android_client_info": {
+          "package_name": "com.kalendria.kalendria"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "313047412167-b2c9d4ftldc8s6m59b4a63kl4pe78786.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kalendria.kalendria",
+            "certificate_hash": "0252BE6D81BC6724DE97FDC431B4C698268DEA9B"
+          }
+        },
+        {
+          "client_id": "313047412167-sben0tbh5tu38c8827nm9ue31lslohll.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDDjM3Qz_heKjTiAeYxmq7wNp8z6W9gyyI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

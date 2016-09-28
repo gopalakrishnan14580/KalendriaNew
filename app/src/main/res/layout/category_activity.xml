@@ -1,0 +1,133 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_36sdp"
+        android:layout_alignParentTop="true"
+        android:layout_centerVertical="true"
+        android:background="@android:color/black"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp">
+
+        <Button
+            android:id="@+id/btnnotification"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/backward_icon" />
+
+        <Button
+            android:id="@+id/btnCurrency"
+            android:layout_width="5dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/btnnotification"
+            android:background="@android:color/transparent"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/tvcatagory_header"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/rightmenu"
+            android:layout_toRightOf="@+id/btnCurrency"
+            android:padding="5dp"
+            android:gravity="center"
+
+            android:text="Beauty"
+            android:textColor="#ffffff"
+            android:textSize="20sp"
+            android:typeface="normal"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/rightmenu"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btncalendar"
+                android:layout_width="5dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="5dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnsettings"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/forward_icon" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/search_bar"
+        android:layout_below="@+id/header"
+        android:layout_width="fill_parent"
+        android:background="@android:color/black"
+        android:layout_height="50dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/category_autocompleted_txt"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/styyles"
+            android:gravity="left|center"
+            android:hint="What would you like to book?"
+            android:paddingLeft="10dp"
+            android:textColor="@android:color/black"
+            android:textCursorDrawable="@null"
+            android:textSize="12dp" />
+
+        <ImageButton
+            android:layout_margin="5dp"
+            android:id="@+id/category_autocompleted_btn"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="2dp"
+            android:layout_marginRight="5dp"
+            android:background="@android:color/white"
+            android:src="@drawable/searchs" />
+
+    </RelativeLayout>
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="0dp"
+        android:layout_below="@+id/search_bar">
+
+        <GridView
+            android:id="@+id/gridview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:horizontalSpacing="0dp"
+            android:numColumns="2"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="0dp" />
+
+    </FrameLayout>
+
+</RelativeLayout>

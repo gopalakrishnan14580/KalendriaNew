@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/gradienBorder"
+        android:background="@drawable/gradientbar1"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"/>
+
+    <LinearLayout
+        android:id="@+id/hotelDetailsParent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="left|center">
+
+
+        <TextView
+
+            android:id="@+id/venu_name_txt"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:gravity="left"
+            android:maxLines="1"
+            android:text="Venue Name "
+            android:textColor="#fff"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <ImageView
+
+            android:id="@+id/favateImage"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_toLeftOf="@+id/ratingbar_venue_items"
+            android:background="@drawable/like"
+            android:gravity="center"
+             />
+
+        <TextView
+
+            android:id="@+id/favate"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_toLeftOf="@+id/ratingbar_venue_items"
+            android:gravity="center"
+            android:maxLines="1"
+            android:text="20"
+            android:textColor="#fff"
+            android:textSize="8sp" />
+        </FrameLayout>
+       <!-- <RatingBar
+            android:id="@+id/ratingbar_venue_items"
+            style="@style/foodRatingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginLeft="6dp"
+         />-->
+
+        <RatingBar
+            android:progressDrawable="@drawable/star_rating_small"
+            android:id="@+id/ratingbar_venue_items"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="16dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="3dp"
+            android:gravity="right"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/thumbnail"
+            android:numStars="5"
+            android:stepSize="0.5" />
+
+        <!--  android:isIndicator="true"-->
+    </LinearLayout>
+
+
+
+    <TextView
+        android:layout_below="@+id/hotelDetailsParent"
+        android:id="@+id/service_title_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:gravity="left"
+        android:maxLines="1"
+        android:text=""
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:visibility="gone"
+        android:textStyle="normal" />
+
+
+
+</RelativeLayout>

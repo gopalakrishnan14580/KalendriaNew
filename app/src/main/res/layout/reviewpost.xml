@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadingEdgeLength="0dp"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="#1E90FF"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/rate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:text="Rate"
+                android:textColor="#000"
+                android:textStyle="bold"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/back"
+                android:layout_width="90dp"
+                android:layout_height="50dp"
+                android:layout_gravity="right|center"
+                android:background="#0079b0"
+                android:gravity="center"
+                android:text="BACK"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/overall"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:text="Overall Satisfaction"
+                android:textColor="#000000"
+                android:textStyle="bold"
+                android:textSize="12dp" />
+
+            <RatingBar
+                android:id="@+id/overall_retting_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/ambience"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:text="Ambience "
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="12dp" />
+
+            <RatingBar
+                android:id="@+id/ambience_retting_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/staff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:text="Staff"
+                android:textColor="#000000"
+                android:textSize="12dp" />
+
+            <RatingBar
+                android:id="@+id/staff_retting_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/clean"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:textStyle="bold"
+                android:text="Cleanliness"
+                android:textColor="#000000"
+                android:textSize="12dp" />
+
+            <RatingBar
+                android:id="@+id/clean_retting_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/Value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:padding="5dp"
+                android:text="Value"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="12dp" />
+
+            <RatingBar
+                android:id="@+id/Value_retting_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="5dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/terms_condition_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="Arial"
+            android:gravity="left"
+            android:lines="1"
+            android:padding="5dp"
+            android:text="RATE YOUR TREATMENT"
+            android:textColor="#0097db"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+
+        <RelativeLayout
+            android:id="@+id/search_bar"
+            android:layout_below="@+id/header"
+            android:layout_width="fill_parent"
+            android:background="@android:color/white"
+            android:layout_height="50dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/post_review_spinner_text"
+                android:layout_width="fill_parent"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:background="@drawable/styyles"
+                android:gravity="left|center"
+                android:hint="Share your comments here..."
+                android:paddingLeft="10dp"
+                android:textColor="@android:color/black"
+                android:textCursorDrawable="@null"
+                android:textSize="12dp" />
+
+            <ImageButton
+
+                android:layout_margin="5dp"
+                android:id="@+id/category_autocompleted_btn"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginBottom="2dp"
+                android:layout_marginRight="5dp"
+                android:background="@android:color/white"
+                android:src="@drawable/expand_arrow" />
+
+        </RelativeLayout>
+
+
+        <com.kalendria.kalendria.utility.NonScrollListView
+            android:id="@+id/list_review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="2dp"
+            android:scrollbars="none"></com.kalendria.kalendria.utility.NonScrollListView>
+
+
+        <!--  <ListView
+          android:layout_width="wrap_content"
+          android:layout_height="150dp"
+          android:id="@android:id/list"
+          android:background="#aaaaaa" />-->
+        <EditText
+            android:id="@+id/post_review_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:hint="Share your comments here..."
+            android:background="@android:color/darker_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:gravity="center|bottom"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/post_review_btn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5sp"
+                android:background="@android:color/darker_gray"
+                android:fontFamily="Arial"
+                android:gravity="center"
+                android:lines="1"
+                android:padding="5dp"
+                android:text="POST REVIEW"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:typeface="serif" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

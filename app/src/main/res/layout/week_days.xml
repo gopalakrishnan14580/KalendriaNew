@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <FrameLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_36sdp"
+        android:background="#0097db">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|center"
+            android:layout_marginLeft="10dp"
+            android:fontFamily="Arial"
+            android:lines="1"
+            android:padding="5dp"
+            android:text="Checkout"
+            android:textColor="@android:color/white"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:typeface="serif" />
+
+        <Button
+            android:id="@+id/checkout_back_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:background="#0079b0"
+            android:text="Back"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+    </FrameLayout>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fadingEdgeLength="0dp"
+    android:fillViewport="true"
+    android:overScrollMode="never"
+    android:scrollbars="none">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+
+        <com.kalendria.kalendria.utility.NonScrollListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="2dp"
+            android:descendantFocusability="blocksDescendants"
+            android:scrollbars="none" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="30dp"
+            android:background="#FFFFFF"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/pre"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="25dp"
+
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:background="@drawable/left_arrow" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_gravity="center_vertical"
+                android:id="@+id/week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="date"
+                android:textColor="#000000"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:id="@+id/next"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+            <ImageView
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="25dp"
+                android:layout_width="@dimen/_18sdp"
+                android:layout_height="@dimen/_18sdp"
+                android:background="@drawable/right_arrow" />
+                </LinearLayout>
+
+        </LinearLayout>
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/days_list"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="1dp"
+            android:background="#ccdcdada" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_170sdp">
+
+        <TextView
+            android:id="@+id/status_label"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/not_available"
+            android:textColor="@color/colorLightTextColor"
+            android:textSize="14dp" />
+
+
+        <ListView
+            android:id="@+id/add_time_list"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_170sdp"
+            android:divider="@color/transparent_background"
+            android:cacheColorHint="#00000000" />
+        </FrameLayout>
+        <LinearLayout
+            android:id="@+id/often_LinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/LinearLayout1"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:background="#D3D3D3"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="false"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/often_textfield_act"
+                style="@style/MyAutoCompleteTextView"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="15dp"
+                android:layout_weight="1"
+                android:focusable="false"
+                android:hint="How often?"
+
+                android:textCursorDrawable="@null"
+
+                android:textSize="@dimen/_15sdp" />
+
+            <TextView
+                android:id="@+id/often_close"
+                android:layout_marginLeft="5dp"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/delete"
+                android:text="" />
+
+            <LinearLayout
+                android:id="@+id/often_dropDownImage"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="10dp"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="match_parent">
+            <ImageButton
+
+                android:scaleType="centerCrop"
+                android:layout_width="@dimen/_14sdp"
+                android:layout_height="@dimen/_14sdp"
+                android:layout_gravity="center|right"
+               android:background="@drawable/down_icon"
+                android:gravity="right" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_25sdp"
+            android:background="#000"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|center"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:text="TOTAL PRICE"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:gravity="right|center"
+                android:text="date"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textSize="14dp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/checkout_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:background="@color/colorSkyBlue"
+            android:text="PROCEED TO CHECKOUT"
+            android:textStyle="bold"
+            android:textColor="@android:color/white" />
+
+
+    </LinearLayout>
+</ScrollView>
+    </LinearLayout>
