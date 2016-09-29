@@ -23,7 +23,8 @@ public class Constant {
     //http://kalendria.elasticbeanstalk.com/
 
    //public final static String HOST ="https://dev.api.kalendria.com/";
-   public final static String HOST ="http://kalendria.elasticbeanstalk.com/";
+   //public final static String HOST ="http://kalendria.elasticbeanstalk.com/";
+   public final static String HOST ="http://bookanyservice-stage.us-east-1.elasticbeanstalk.com/";
 
     public final static String LOGIN_URL = HOST+"api/v1/auth/local";
     public final static String LOGIN_URL_CHECK_SOCIAL_MEDIA_BY_EMAIL=HOST+"api/v1/user?email=";
